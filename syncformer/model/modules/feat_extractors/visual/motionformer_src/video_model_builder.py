@@ -10,7 +10,7 @@ import torch
 import torch.nn as nn
 from functools import partial
 from timm.models.layers import trunc_normal_
-from motionformer_src import vit_helper
+from syncformer.model.modules.feat_extractors.visual.motionformer_src import vit_helper
 
 
 class VisionTransformer(nn.Module):

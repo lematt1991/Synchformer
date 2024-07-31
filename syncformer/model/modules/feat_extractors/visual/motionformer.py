@@ -7,7 +7,7 @@ from torch import nn
 from timm.models.layers import trunc_normal_
 import einops
 
-from motionformer_src.video_model_builder import VisionTransformer
+from syncformer.model.modules.feat_extractors.visual.motionformer_src.video_model_builder import VisionTransformer
 from syncformer.utils.utils import check_if_file_exists_else_download
 
 FILE2URL = {
