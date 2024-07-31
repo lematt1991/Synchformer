@@ -1,5 +1,26 @@
 # Synchformer: Efficient Synchronization from Sparse Cues
 
+Structure fixed with:
+
+```
+# Remap imports to be nested inside of a `syncformer` package
+for file in $(find . -name "*.py"); do
+    sed -i 's/from \(configs\|data\|dataset\|model\|utils\)\./from syncformer.\1./g' $file
+done
+
+# move packages
+mkdir syncformer
+mv data dataset model utils syncformer
+
+# Add an __init__.py to every directory
+for dir in $(find syncformer -type d -name "*"); do
+    touch "$dir/__init__.py"
+done
+
+```
+
+
+
 ```bibtex
 @InProceedings{synchformer2024iashin,
   title={Synchformer: Efficient Synchronization from Sparse Cues},
