@@ -8,7 +8,7 @@ from omegaconf import OmegaConf
 import torch
 import torch.distributed as dist
 
-from utils.logger import LoggerWithTBoard
+from syncformer.utils.logger import LoggerWithTBoard
 from scripts.train_utils import (EarlyStopper, AverageMeter,
                                  broadcast_obj, get_batch_sizes, get_curr_time_w_random_shift, get_datasets,
                                  get_device, get_loaders, get_lr_scheduler,
@@ -17,7 +17,7 @@ from scripts.train_utils import (EarlyStopper, AverageMeter,
                                  make_backward_and_optim_step, prepare_inputs,
                                  set_seed, toggle_mode, verbose_epoch_progress, apply_fn_recursive,
                                  verbose_test_progress)
-from utils.utils import show_cfg_diffs
+from syncformer.utils.utils import show_cfg_diffs
 
 
 def train(cfg):

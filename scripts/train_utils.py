@@ -21,7 +21,7 @@ from sklearn.metrics import (top_k_accuracy_score, average_precision_score, roc_
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader, DistributedSampler
 
-from utils.utils import (fix_prefix, get_obj_from_str, get_transform_instance_from_compose,
+from syncformer.utils.utils import (fix_prefix, get_obj_from_str, get_transform_instance_from_compose,
                          instantiate_from_config, show_cfg_diffs)
 
 

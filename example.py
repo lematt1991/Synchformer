@@ -7,9 +7,9 @@ import torchaudio
 import torchvision
 from omegaconf import OmegaConf
 
-from dataset.dataset_utils import get_video_and_audio
-from dataset.transforms import make_class_grid, quantize_offset
-from utils.utils import check_if_file_exists_else_download, which_ffmpeg
+from syncformer.dataset.dataset_utils import get_video_and_audio
+from syncformer.dataset.transforms import make_class_grid, quantize_offset
+from syncformer.utils.utils import check_if_file_exists_else_download, which_ffmpeg
 from scripts.train_utils import get_model, get_transforms, prepare_inputs
 
 

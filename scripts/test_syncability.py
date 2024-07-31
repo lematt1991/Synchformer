@@ -14,13 +14,13 @@ sys.path.insert(0, '.')  # nopep8
 from omegaconf import OmegaConf
 import torch
 import torch.distributed as dist
-from model.modules.feat_extractors.train_clip_src.training.train import AverageMeter
+from syncformer.model.modules.feat_extractors.train_clip_src.training.train import AverageMeter
 
 from scripts.train_utils import (broadcast_obj, calc_cls_metrics, gather_dict, get_batch_sizes,
                                  get_curr_time_w_random_shift, get_datasets,
                                  get_device, get_loaders, get_model, get_transforms, is_master,
                                  prepare_inputs, set_seed)
-from utils.utils import cfg_sanity_check_and_patch
+from syncformer.utils.utils import cfg_sanity_check_and_patch
 from sklearn.metrics import roc_curve, roc_auc_score
 
 

@@ -3,7 +3,7 @@ import os
 from omegaconf import OmegaConf
 
 from scripts.train_utils import get_curr_time_w_random_shift
-from utils.utils import cfg_sanity_check_and_patch
+from syncformer.utils.utils import cfg_sanity_check_and_patch
 
 def set_env_variables():
     # checks if not run with torchrun or torch.launch.distributed
@@ -31,7 +31,7 @@ def get_config():
 
 def main(cfg):
     if cfg.action == 'train_avclip':
-        from model.modules.feat_extractors.train_clip_src.training.train_clip import main as train
+        from syncformer.model.modules.feat_extractors.train_clip_src.training.train_clip import main as train
     elif cfg.action in ['train_avsync_model', 'ft_avsync_model_for_syncability']:
         from scripts.train_sync import train as train
     else:
